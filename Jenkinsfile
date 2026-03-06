@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout Source Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                git branch: 'main', url: 'https://github.com/Madr8/springboot-jenkins-midterm'
             }
         }
 
