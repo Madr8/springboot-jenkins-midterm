@@ -15,14 +15,15 @@ pipeline {
     stage('Test') {
       steps {
         sh 'git --version'
-        sh 'mvn --version'
-        sh 'mvn clean test'
+        sh 'chmod +x mvnw'
+        sh './mvnw --version'
+        sh './mvnw clean test'
       }
     }
 
     stage('Build and Package') {
       steps {
-        sh 'mvn clean package -DskipTests'
+        sh './mvnw clean package -DskipTests'
       }
     }
 
