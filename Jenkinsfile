@@ -5,10 +5,6 @@ pipeline {
     skipStagesAfterUnstable()
   }
 
-  tools {
-    maven '3.9.11'
-  }
-
   stages {
     stage('Checkout Source Code') {
       steps {
